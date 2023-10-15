@@ -25,21 +25,56 @@ class Usuario():
         
 #Definindo informações de cadastro de usuários:
 
-usuario1 = Usuario("usuario1", "1234", "adm")
-usuario2 = Usuario("usuario2", "Abcd", "moderador")
-#usuario3 = Usuario("João", "GHJ", "funcionário")
-#usuario4 = Usuario("Mariana", "78910", "adm")
+usuario1 = Usuario("usuario1", "1234", "administrador")
+usuario2 = Usuario("usuario2", "abc", "moderador")
+usuario3 = Usuario("usuario3", "GHJ", "funcionário")
+usuario4 = Usuario("usuario4", "789", "administrador")
     
 #Coletando dados para utilizar o controle de usuário criado:
     
 nome_login = input("Digite seu nome: ")
 senha_login = input("Digite sua senha: ")
+
+if nome_login == usuario1.login:
     
-usuario1.hash_senha(senha_login)
+    usuario1.hash_senha(senha_login)
+        
+    if usuario1.verificacao_senha(senha_login):
+        print("Senha correta")
+        print("\n")
+        print(f"Sua permissão é de {usuario1.permission}")     
+    else:
+        print("Senha incorreta. Tente novamente.")
+        
+elif nome_login == usuario2.login:
     
-if usuario1.verificacao_senha(senha_login):
-    print("Senha correta")
-    print("\n")
-    print(f"Sua permissão é de {usuario1.permission}")     
+    usuario2.hash_senha(senha_login)
+        
+    if usuario2.verificacao_senha(senha_login):
+        print("Senha correta")
+        print("\n")
+        print(f"Sua permissão é de {usuario2.permission}")     
+    else:
+        print("Senha incorreta. Tente novamente.")
+
+elif nome_login == usuario3.login:
+    
+    usuario3.hash_senha(senha_login)
+        
+    if usuario3.verificacao_senha(senha_login):
+        print("Senha correta")
+        print("\n")
+        print(f"Sua permissão é de {usuario3.permission}")     
+    else:
+        print("Senha incorreta. Tente novamente.")
+        
 else:
-    print("Senha incorreta. Tente novamente.")
+    
+    usuario4.hash_senha(senha_login)
+        
+    if usuario4.verificacao_senha(senha_login):
+        print("Senha correta")
+        print("\n")
+        print(f"Sua permissão é de {usuario4.permission}")     
+    else:
+        print("Senha incorreta. Tente novamente.")
