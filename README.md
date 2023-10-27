@@ -1,18 +1,18 @@
 # Exercicio-2
 Segundo trabalho da aula de Técnicas de Desenvolvimento de Software Livre: criar uma classe para controle de usuário usando hash em pyhton
 
-## Parte 1
+### Parte 1
 
 Foi importado algoritmo SHA256 da biblioteca hashlib para que fosse possível aramzenar o hash da senha do usuário, garantindo uma segurança maior do banco de dados de senhas (hashs).
 
 Foi criada uma classe chamada "Usuário" para caracterizar usuários com um nome, uma senha e um nível (moderador, administrador ou funcionário).
 Dentro dessa classe, foi feita uma função para transformar a senha respectiva do usuário em um hash (função "hash_senha") e uma outra função para fazer a verificação da senha (função "verificacao_senha"), ou seja, confirmar se o hash da senha escrita pelo usuário é idêntica ao hash da senha cadastrada para esse usuário.
 
-## Parte 2
+### Parte 2
 
 Foram definidos quatro objetos da classe como usuários que já haviam sido cadastrados no site da empresa.
 
-## Parte 3
+### Parte 3
 
 Foi feito um input para nome e senha para poder coletar esses dados e utilizar o controle de usuário criado.
 
